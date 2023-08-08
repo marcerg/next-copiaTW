@@ -18,34 +18,8 @@ export default function Home() {
         <h1>
           <a href="https://nextjs.org">devter</a>
         </h1>
-        <nav>
-          <Link href='/timeline'>
-              timeline
-          </Link>
-        </nav>
+
       </AppLayout>
-
-      <style jsx>{`
-        h1 {
-          text-align: center;
-          font-size: 48px;
-        }
-
-        nav {
-          font-size: 24px;
-          text-align: center;
-        }
-
-        .another-title {
-          color: #333;
-          font-size: 24px;
-        }
-
-        a {
-          color: orange;
-          text-decoration: none;
-        }
-      `}</style>
     </>
   )
 }
