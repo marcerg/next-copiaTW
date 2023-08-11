@@ -2,37 +2,27 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true
+    node: true,
   },
-  extends: [
-    'standard',
-    'plugin:react/recommended'
-  ],
+  extends: ["standard", "plugin:react/recommended", "prettier"],
   overrides: [
     {
       env: {
-        node: true
+        node: true,
       },
-      files: [
-        '.eslintrc.{js,cjs}'
-      ],
+      files: [".eslintrc.{js,cjs}"],
       parserOptions: {
-        sourceType: 'script'
-      }
-    }
+        sourceType: "script",
+      },
+    },
   ],
   parserOptions: {
-    ecmaFeacture: {
-      jsx: true
-    },
-    ecmaVersion: 'latest',
-    sourceType: 'module'
+    ecmaVersion: "latest",
+    sourceType: "module",
   },
-  plugins: [
-    'react'
-  ],
+  plugins: ["react"],
   rules: {
-    'react/prop-types': 'off',
-    'react/react-in-jsx-scope': 'off'
-  }
-}
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+  },
+};
