@@ -1,4 +1,4 @@
-import { colors } from "../../style/theme";
+import { colors } from '../../style/theme'
 
 export default function Button ({ children, onClick }) {
   return (

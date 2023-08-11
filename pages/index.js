@@ -5,11 +5,11 @@ import { colors } from '../style/theme'
 import Button from '../components/Button'
 import GitHub from '../components/Icons/GitHub'
 
-import { loginWithGitHub, onAuthStateChanged} from '../firebase/client'
+import { loginWithGitHub, onAuthStateChanged } from '../firebase/client'
 
-export default function Home() {
+export default function Home () {
   const [user, setUser] = useState(undefined)
-  
+
   useEffect(() => {
     onAuthStateChanged(setUser)
   }, [])
