@@ -32,26 +32,24 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <AppLayout>
-        <section>
-          <Logo height="100px" />
-          <h1>Devter</h1>
-          <h2>
-            Talk about development
-            <br />
-            with developers 👨‍💻👩‍💻
-          </h2>
-          <div>
-            {user === USER_STATES.NOT_LOGGED && (
-              <Button onClick={handleClick}>
-                <GitHub fill="#fff" width={24} height={24} />
-                Login with GitHub
-              </Button>
-            )}
-            {user === USER_STATES.NOT_KNOWN && <img src="/spinner.gif" />}
-          </div>
-        </section>
-      </AppLayout>
+      <section>
+        <Logo height="100px" />
+        <h1>Devter</h1>
+        <h2>
+          Talk about development
+          <br />
+          with developers 👨‍💻👩‍💻
+        </h2>
+        <div>
+          {user === USER_STATES.NOT_LOGGED && (
+            <Button onClick={handleClick}>
+              <GitHub fill="#fff" width={24} height={24} />
+              Login with GitHub
+            </Button>
+          )}
+          {user === USER_STATES.NOT_KNOWN && <img src="/spinner.gif" />}
+        </div>
+      </section>
 
       <style jsx>
         {`

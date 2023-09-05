@@ -1,9 +1,7 @@
-import AppLayout from "../../components/AppLayout";
 import { useState, useEffect } from "react";
 import Devit from "../../components/Devit";
 import useUser from "../../hooks/useUser";
 import { fetchLatestDevits } from "../../firebase/client";
-import Link from "next/link";
 import Create from "../../components/Icons/Create";
 import Home from "../../components/Icons/Home";
 import Search from "../../components/Icons/Search";
@@ -19,43 +17,42 @@ export default function HomePage() {
   }, [user]);
   return (
     <>
-      <AppLayout>
-        <Head>
-          <title>Inicio / Devter</title>
-        </Head>
-        <header>
-          <h2>Inicio</h2>
-        </header>
-        <section>
-          {timeline.map(
-            ({ createdAt, img, id, userName, avatar, content, userId }) => (
-              <Devit
-                avatar={avatar}
-                createdAt={createdAt}
-                id={id}
-                img={img}
-                key={id}
-                content={content}
-                userName={userName}
-                userId={userId}
-              />
-            )
-          )}
-        </section>
+      <Head>
+        <title>Inicio / Devter</title>
+      </Head>
+      <header>
+        <h2>Inicio</h2>
+      </header>
+      <section>
+        {timeline.map(
+          ({ createdAt, img, id, userName, avatar, content, userId }) => (
+            <Devit
+              avatar={avatar}
+              createdAt={createdAt}
+              id={id}
+              img={img}
+              key={id}
+              content={content}
+              userName={userName}
+              userId={userId}
+            />
+          )
+        )}
+      </section>
+      <nav>
         <nav>
-          <nav>
-            <a href="/home">
-              <Home width={32} height={32} stroke="#09f" />
-            </a>
-            <a href="/search">
-              <Search width={32} height={32} stroke="#09f" />
-            </a>
-            <a href="/compose/tweet">
-              <Create width={32} height={32} stroke="#09f" />
-            </a>
-          </nav>
+          <a href="/home">
+            <Home width={32} height={32} stroke="#09f" />
+          </a>
+          <a href="/search">
+            <Search width={32} height={32} stroke="#09f" />
+          </a>
+          <a href="/compose/tweet">
+            <Create width={32} height={32} stroke="#09f" />
+          </a>
         </nav>
-      </AppLayout>
+      </nav>
+
       <style jsx>{`
         header {
           align-items: center;

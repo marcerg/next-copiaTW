@@ -33,3 +33,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# firebase keys
+firebase/devter-f0751-firebase-adminsdk-ufi8n-4e50ed6787.json
