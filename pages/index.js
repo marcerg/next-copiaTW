@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { useEffect } from "react";
-import AppLayout from "../components/AppLayout";
 import { colors } from "../style/theme";
 import Button from "../components/Button";
 import GitHub from "../components/Icons/GitHub";
